@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/glassechidna/ec2connect/cmd"
+	"github.com/escaletech/ec2connect/cmd"
 )
 
 func main() {

@@ -3,6 +3,11 @@ package cmd
 import (
 	"context"
 	"fmt"
+	"io"
+	"net"
+	"os"
+	"strings"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/awserr"
 	"github.com/aws/aws-sdk-go/aws/credentials"
@@ -11,14 +16,10 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ec2"
 	"github.com/aws/aws-sdk-go/service/ec2instanceconnect"
-	"github.com/glassechidna/ec2connect/pkg/ec2connect"
-	"github.com/glassechidna/ec2connect/pkg/sshconfig"
+	"github.com/escaletech/ec2connect/pkg/ec2connect"
+	"github.com/escaletech/ec2connect/pkg/sshconfig"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
-	"io"
-	"net"
-	"os"
-	"strings"
 )
 
 func init() {
