@@ -1,10 +1,6 @@
-# This is an example .goreleaser.yml file with some sane defaults.
-# Make sure to check the documentation at http://goreleaser.com
 before:
   hooks:
-    # You may remove this if you don't use go modules.
     - go mod tidy
-    # you may remove this if you don't need go generate
     - go generate ./...
 builds:
   - env:
@@ -13,6 +9,10 @@ builds:
       - linux
       - windows
       - darwin
+    goarch:
+      - amd64
+    ldflags:
+      - -s -w -X github.com/escaletech/ec2connect/cmd.version={{.Version}} -X github.com/escaletech/ec2connect/cmd.commit={{.ShortCommit}} -X github.com/escaletech/ec2connect/cmd.date={{.Date}}
 archives:
   - replacements:
       darwin: Darwin
@@ -30,3 +30,30 @@ changelog:
     exclude:
       - '^docs:'
       - '^test:'
+nfpm:
+  vendor: ec2connect
+  homepage: https://github.com/escaletech/ec2connect
+  maintainer: Escale Digital <dev@escale.com.br>
+  description: ec2connect is a convenient SSH wrapper around EC2 instance connect
+  formats:
+    - deb
+brew:
+  github:
+    owner: escaletech
+    name: homebrew-tap
+  folder: Formula
+  commit_author:
+    name: CI Bot
+    email: dev@escale.com.br
+  homepage: https://github.com/escaletech/ec2connect
+  description: ec2connect is a convenient SSH wrapper around EC2 instance connect
+scoop:
+  bucket:
+    owner: escaletech
+    name: scoop-bucket
+  commit_author:
+    name: CI Bot
+    email: dev@escale.com.br
+  homepage: https://github.com/escaletech/ec2connect
+  description: ec2connect is a convenient SSH wrapper around EC2 instance connect
+  license: MIT
