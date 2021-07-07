@@ -30,23 +30,25 @@ changelog:
     exclude:
       - '^docs:'
       - '^test:'
-nfpm:
-  vendor: ec2connect
-  homepage: https://github.com/escaletech/ec2connect
-  maintainer: Escale Digital <dev@escale.com.br>
-  description: ec2connect is a convenient SSH wrapper around EC2 instance connect
-  formats:
-    - deb
-brew:
-  github:
-    owner: escaletech
-    name: homebrew-tap
-  folder: Formula
-  commit_author:
-    name: CI Bot
-    email: dev@escale.com.br
-  homepage: https://github.com/escaletech/ec2connect
-  description: ec2connect is a convenient SSH wrapper around EC2 instance connect
+nfpms:
+  -
+    vendor: ec2connect
+    homepage: https://github.com/escaletech/ec2connect
+    maintainer: Escale Digital <dev@escale.com.br>
+    description: ec2connect is a convenient SSH wrapper around EC2 instance connect
+    formats:
+      - deb
+brews:
+  -
+    tap:
+      owner: escaletech
+      name: homebrew-tap
+    folder: Formula
+    commit_author:
+      name: CI Bot
+      email: dev@escale.com.br
+    homepage: https://github.com/escaletech/ec2connect
+    description: ec2connect is a convenient SSH wrapper around EC2 instance connect
 scoop:
   bucket:
     owner: escaletech
