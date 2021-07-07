@@ -10,7 +10,7 @@ builds:
     goarch:
       - amd64
     ldflags:
-      - -s -w -X github.com/glassechidna/ec2connect/cmd.version={{.Version}} -X github.com/glassechidna/ec2connect/cmd.commit={{.ShortCommit}} -X github.com/glassechidna/ec2connect/cmd.date={{.Date}}
+      - -s -w -X github.com/escaletech/ec2connect/cmd.version={{.Version}} -X github.com/escaletech/ec2connect/cmd.commit={{.ShortCommit}} -X github.com/escaletech/ec2connect/cmd.date={{.Date}}
 archives:
   - replacements:
       darwin: Darwin
@@ -30,27 +30,27 @@ changelog:
       - '^test:'
 nfpm:
   vendor: ec2connect
-  homepage: https://github.com/glassechidna/ec2connect
+  homepage: https://github.com/escaletech/ec2connect
   maintainer: Aidan Steele <aidan.steele@glassechidna.com.au>
   description: ec2connect is a convenient SSH wrapper around EC2 instance connect
   formats:
     - deb
 brew:
   github:
-    owner: glassechidna
+    owner: escaletech
     name: homebrew-taps
   commit_author:
     name: Aidan Steele
     email: aidan.steele@glassechidna.com.au
-  homepage: https://github.com/glassechidna/ec2connect
+  homepage: https://github.com/escaletech/ec2connect
   description: ec2connect is a convenient SSH wrapper around EC2 instance connect
 scoop:
   bucket:
-    owner: glassechidna
+    owner: escaletech
     name: scoop-bucket
   commit_author:
     name: Aidan Steele
     email: aidan.steele@glassechidna.com.au
-  homepage: https://github.com/glassechidna/ec2connect
+  homepage: https://github.com/escaletech/ec2connect
   description: ec2connect is a convenient SSH wrapper around EC2 instance connect
   license: MIT
