@@ -1,6 +1,14 @@
 # `ec2connect`
 
-![render1561718563616](https://user-images.githubusercontent.com/369053/60337186-ad908180-99e5-11e9-9db3-de8b0d353739.gif)
+![](https://github.com/escaletech/ec2connect/blob/master/screencast/ec2connect-screen.gif)
+
+This is a fork from [glassechidna/ec2connect](https://github.com/glassechidna/ec2connect).
+The last commit is from two years ago. This project is very usefull and functional,
+except that it was not working on AWS SSO authentication.
+
+As it became very useful, we in [Escale Digital](https://escale.com.br/) decided to fork & maintain it.
+
+The following content is from original README repository. We only had to update the repository owner references.
 
 In [June 2019][rel-notes], AWS released [EC2 Instance Connect][docs] - a way of
 authenticating SSH sessions using AWS IAM policies. This **massively** improves
@@ -19,8 +27,7 @@ AWS did release an [`mssh`][mssh] tool, but it's not as nice as it could be.
 
 ## Installation
 
-* Mac: `brew install glassechidna/taps/ec2connect`
-* Windows: `scoop bucket add glassechidna https://github.com/glassechidna/scoop-bucket.git; scoop install ec2connect`
+* Mac: `brew install escaletech/taps/ec2connect`
 * Otherwise get the latest build from the [Releases][releases] tab.
 
 ## Usage
@@ -53,4 +60,4 @@ using `ssh -i <pemfile>`.
 [rel-notes]: https://aws.amazon.com/about-aws/whats-new/2019/06/introducing-amazon-ec2-instance-connect/
 [docs]: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Connect-using-EC2-Instance-Connect.html
 [mssh]: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-connect-set-up.html#ec2-instance-connect-install-eic-CLI
-[releases]: https://github.com/glassechidna/ec2connect/releases
+[releases]: https://github.com/escaletech/ec2connect/releases
