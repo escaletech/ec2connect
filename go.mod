@@ -1,4 +1,4 @@
-module github.com/glassechidna/ec2connect
+module github.com/escaletech/ec2connect
 
 go 1.12
 
