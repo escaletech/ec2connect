@@ -1,5 +1,7 @@
 # `ec2connect`
 
+![](https://github.com/escaletech/ec2connect/blob/master/screencast/ec2connect-screen.gif)
+
 This is a fork from [glassechidna/ec2connect](https://github.com/glassechidna/ec2connect).
 The last commit is from two years ago. This project is very usefull and functional,
 except that it was not working on AWS SSO authentication.
