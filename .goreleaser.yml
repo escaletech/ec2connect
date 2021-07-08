@@ -38,6 +38,7 @@ nfpms:
     description: ec2connect is a convenient SSH wrapper around EC2 instance connect
     formats:
       - deb
+      - rpm
 brews:
   -
     tap:
